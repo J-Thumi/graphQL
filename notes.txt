@@ -1,0 +1,54 @@
+In REST, you often make multiple requests to different endpoints to get related data, whereas, in GraphQL, you can retrieve related data in a single query.
+GraphQL is client-driven, meaning clients control the structure of the response, while REST responses are determined by the server.
+
+
+GraphQL is a query language for APIs and a runtime for executing those queries by allowing clients to request exactly the data they need. It was developed by Facebook and open-sourced in 2015 as an alternative to REST for fetching data from APIs.
+
+Key Concepts of GraphQL:
+Schema:
+
+The schema defines the structure of the API, including the types of data and the available operations. The schema is written in the Schema Definition Language (SDL) or can be programmatically created in code.
+Types:
+
+GraphQL uses types to describe the shape of the data. The core types include:
+Scalar Types: Basic data types like Int, Float, String, Boolean, and ID.
+Object Types: Custom types representing complex data structures.
+Enum Types: A special kind of scalar that is limited to a set of predefined values.
+Input Types: Used for passing structured arguments into queries or mutations.
+Queries:
+
+Queries allow clients to read data from the server. A query defines the exact fields and nested fields the client wants to retrieve, so the response includes only the requested data.
+
+Mutations:
+
+Mutations allow clients to modify data on the server (create, update, or delete data). Unlike queries, mutations can change server-side data.
+
+Subscriptions:
+
+Subscriptions allow clients to receive real-time updates when data changes on the server. They are particularly useful for live updates in applications, like chat systems or live dashboards.
+
+Resolvers:
+
+Resolvers are functions that handle the logic of fetching or modifying data in response to GraphQL queries, mutations, and subscriptions. They map schema fields to data sources (e.g., databases, external APIs).
+Arguments:
+
+Queries and mutations can accept arguments, allowing clients to request specific data or perform specific actions.
+
+Fragments:
+
+Fragments allow clients to reuse parts of queries to avoid duplication, especially when the same fields are needed in multiple places.
+
+
+In GraphQL, resolvers and schemas are core components that together define how your API works.
+
+GraphQL Schema:
+A GraphQL schema defines the structure of your API by specifying what types of data can be queried or mutated (changed), the relationships between data, and the operations that the API can perform. It’s written in a Schema Definition Language (SDL) or can be defined programmatically.
+
+The schema typically consists of:
+
+Types: Define the shape of the data.
+Example: User, Post, etc.
+Queries: Define the read operations that clients can perform.
+Example: Fetching a list of users or a single user by ID.
+Mutations: Define the write operations (like creating, updating, or deleting data).
+Subscriptions: Define real-time operations (for example, listening for changes in data).
